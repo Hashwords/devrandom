@@ -3,7 +3,7 @@
 <project name="devrandom" default="jar">
 
   <tstamp>
-    <format property="current.time" pattern="yyyy-MM-dd" locale="en,UK"/>
+    <format property="current.time" pattern="yyyyDDD" locale="en"/>
   </tstamp>
   <property name="src.dir" value="src"/>
   <property name="bin.dir" value="bin"/>
