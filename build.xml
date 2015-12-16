@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
-<project name="devrandom" default="jar">
+<project name="devrandom" default="compile">
 
   <tstamp>
     <format property="current.time" pattern="yyyyDDD" locale="en"/>
