@@ -1,9 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
 <project name="devrandom" default="jar">
-  
+
+  <tstamp>
+    <format property="current.time" pattern="yyyy-MM-dd" locale="en,UK"/>
+  </tstamp>
   <property name="src.dir" value="src"/>
   <property name="bin.dir" value="bin"/>
   <property name="jar.dir" value="jar"/>
-  <property name="jar.file" value="${jar.dir}/DevRandom.jar"/>
+  <property name="jar.file" value="${jar.dir}/devrandom-${current.time}.jar"/>
 
   <target name="compile">
     <mkdir dir="${bin.dir}"/>
