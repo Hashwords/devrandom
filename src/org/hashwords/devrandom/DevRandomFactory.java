@@ -87,6 +87,8 @@ public class DevRandomFactory
 	 */
 	public static final String[] SUPPORTED_OSES = { MACOSX , LINUX , FREEBSD , OPENBSD , NETBSD , DRAGONFLY } ;
 
+	private DevRandomFactory(){}
+
 	/**
 	 * Check wether or not a given operating system is currently supported.
 	 * @param OS	name of the operating system.
