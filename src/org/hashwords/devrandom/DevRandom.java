@@ -107,8 +107,8 @@ public class DevRandom extends Random
 	 * <p>Construct a DevRandom object using an operating-system-based device.</p>
 	 * Chooses a device that may block.<br>
 	 * @see #DevRandom(boolean)
-	 * @see #BLOCKING
-	 * @see #NON_BLOCKING
+	 * @see #PREFERRED_BLOCKING
+	 * @see #PREFERRED_NON_BLOCKING
 	 * @see <a href="https://en.wikipedia.org/wiki//dev/random">/dev/random</a> and random(4) in your operating system's man pages.
 	 * @throws FileNotFoundException
 	 */
@@ -135,6 +135,7 @@ public class DevRandom extends Random
 	 * <p>Construct a DevRandom object using an operating-system-based device.</p>
 	 * @param deviceName	accepts only device names known to {@link DevRandom} or throws IllegalArgumentException
 	 * @throws FileNotFoundException
+	 * @see #deviceNames
 	 * @see <a href="https://en.wikipedia.org/wiki//dev/random">/dev/random</a> and random(4) in your operating system's man pages.
 	 */
 	public DevRandom( String deviceName ) throws FileNotFoundException

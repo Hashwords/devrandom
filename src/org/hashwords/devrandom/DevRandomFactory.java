@@ -140,6 +140,8 @@ public class DevRandomFactory
 	 * Create and return a {@link DevRandom} object for this operating system with the default configuration.
 	 * @return {@link DevRandom} object.
 	 * @see DevRandom#DevRandom()
+	 * @see DevRandom#PREFERRED_BLOCKING
+	 * @see DevRandom#PREFERRED_NON_BLOCKING
 	 * @see <a href="https://en.wikipedia.org/wiki//dev/random">/dev/random</a> and random(4) in your operating system's man pages.
 	 */
 	public static DevRandom getInstance()
@@ -195,6 +197,7 @@ public class DevRandomFactory
 	 * @param device	path to device, accepts only known devices or throws IllegalArgumentException
 	 * @return {@link DevRandom} object.
 	 * @see DevRandom#DevRandom(String)
+	 * @see DevRandom#deviceNames
 	 * @see <a href="https://en.wikipedia.org/wiki//dev/random">/dev/random</a> and random(4) in your operating system's man pages.
 	 */
 	public static DevRandom getInstance( String device )
