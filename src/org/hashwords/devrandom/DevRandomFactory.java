@@ -25,6 +25,9 @@ package org.hashwords.devrandom ;
 
 import java.lang.reflect.Constructor ;
 
+/**
+ * Factory pattern for creating and using {@link DevRandom} objects.
+ */
 public class DevRandomFactory
 {
 	public static final String DRAGONFLY	= "DragonFly" ;
@@ -35,15 +38,15 @@ public class DevRandomFactory
 	public static final String OPENBSD		= "OpenBSD" ;
 	
 	/**
-	 * Current list of supported operating systems.<br/>
+	 * Current list of supported operating systems.
 	 * List should match entry returned by system property "os.name".
-	 * @see {@link java.lang.System#getProperty(java.lang.String)}
+	 * @see java.lang.System#getProperty(java.lang.String)
 	 */
 	public static final String[] SUPPORTED_OSES = { MACOSX , LINUX , FREEBSD , OPENBSD , NETBSD , DRAGONFLY } ;
 
 	/**
 	 * Check wether or not a given operating system is currently supported.
-	 * @param OS - name of the operating system.
+	 * @param OS	name of the operating system.
 	 * @return boolean indicating wether or not a given operating system is currently supported.
 	 */
 	private static boolean supported( String OS )
@@ -90,8 +93,8 @@ public class DevRandomFactory
 	/**
 	 * Create and return a {@link DevRandom} object for this operating system with the default configuration.
 	 * @return {@link DevRandom} object.
-	 * @see {@link DevRandom#DevRandom()}
-	 * @see random(4) in your operating system's man pages.
+	 * @see DevRandom#DevRandom()
+	 * @see <a href="https://en.wikipedia.org/wiki//dev/random">/dev/random</a> and random(4) in your operating system's man pages.
 	 */
 	public static DevRandom getInstance()
 	{
@@ -115,12 +118,12 @@ public class DevRandomFactory
 	/**
 	 * Create and return a {@link DevRandom} object for this operating system
 	 * using the preferred blocking or non-blocking device.
-	 * @param blocking - boolean that selects between blocking and non-blocking devices.
+	 * @param blocking	boolean that selects between blocking and non-blocking devices.
 	 * @return {@link DevRandom} object.
-	 * @see {@link DevRandom#DevRandom( boolean )}
-	 * @see {@link DevRandom#BLOCKING}
-	 * @see {@link DevRandom#NON_BLOCKING}
-	 * @see random(4) in your operating system's man pages.
+	 * @see DevRandom#DevRandom(boolean)
+	 * @see DevRandom#BLOCKING
+	 * @see DevRandom#NON_BLOCKING
+	 * @see <a href="https://en.wikipedia.org/wiki//dev/random">/dev/random</a> and random(4) in your operating system's man pages.
 	 */
 	public static DevRandom getInstance( boolean blocking )
 	{
@@ -143,10 +146,10 @@ public class DevRandomFactory
 
 	/**
 	 * Create and return a {@link DevRandom} object for this operating system using the given device.
-	 * @param device - path to device, accepts only known devices or throws IllegalArgumentException
+	 * @param device	path to device, accepts only known devices or throws IllegalArgumentException
 	 * @return {@link DevRandom} object.
-	 * @see {@link DevRandom#DevRandom( String )}
-	 * @see random(4) in your operating system's man pages.
+	 * @see DevRandom#DevRandom(String)
+	 * @see <a href="https://en.wikipedia.org/wiki//dev/random">/dev/random</a> and random(4) in your operating system's man pages.
 	 */
 	public static DevRandom getInstance( String device )
 	{

@@ -25,19 +25,23 @@ package org.hashwords.devrandom ;
 
 import java.io.FileNotFoundException ;
 
+/**
+ * <p>Pseudo random number generator using an <a href="http://www.openbsd.org/">OpenBSD</a>-based device.</p>
+ * @see <a href="http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man4/arandom.4">random(4)</a>
+ */
 @SuppressWarnings( "serial" )
 public final class OpenBSDRandom extends DevRandom
 {
 	/**
 	 * The String "/dev/arandom" for use with constructor, used for legacy reasons.
-	 * @see #DevRandom( String )
-	 * @see random(4) in your operating system's man pages.
+	 * @see DevRandom#DevRandom(String)
+	 * @see #random(4) in your operating system's man pages.
 	 */
 	public final static String DEV_ARANDOM = "/dev/arandom" ;
 
 	/**
 	 * The String "/dev/srandom" for use with constructor, used for legacy reasons.
-	 * @see #DevRandom( String )
+	 * @see DevRandom#DevRandom(String)
 	 * @see random(4) in your operating system's man pages.
 	 */
 	public final static String DEV_SRANDOM = "/dev/srandom" ;
@@ -58,7 +62,7 @@ public final class OpenBSDRandom extends DevRandom
 	    super( blocking ) ;
     }
 
-	public OpenBSDRandom( String deviceName ) throws FileNotFoundException , IllegalArgumentException
+	public OpenBSDRandom( String deviceName ) throws FileNotFoundException
     {
 	    super( deviceName ) ;
     }

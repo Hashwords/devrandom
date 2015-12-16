@@ -1,26 +1,34 @@
 package org.hashwords.devrandom ;
 
+import java.io.ByteArrayInputStream ;
+import java.io.ByteArrayOutputStream ;
 import java.io.FileNotFoundException ;
+import java.io.IOException ;
+import java.io.ObjectInputStream ;
+import java.io.ObjectOutputStream ;
+import java.util.Locale ;
 import java.util.Random ;
 
+/**
+ * <p>Miscellaneous package-based tests.<p/>
+ * <p><font color="red">WARNING :</font> Abandon all hope all ye who enter here !</p>
+ */
 public class TestDevRandom
 {
 	public static void main( String[] args ) throws FileNotFoundException, InterruptedException
 	{
-		{
-    		//java.security.SecureRandom random = new java.security.SecureRandom() ;
-    		//Random random = new Random() ;
-    		DevRandom random = DevRandomFactory.getInstance( "/dev/random" ) ;
-    		testSeeding( random ) ;
-    		piTest( random ) ;
-    		Thread.sleep( 2000 ) ;
-    		generalTest( random ) ;
-    
-    		random = null ;
-		}
+		DevRandom random = DevRandomFactory.getInstance( "/dev/random" ) ;
 
-		System.gc() ;
+		testSeeding( random ) ;
+		piTest( random ) ;
 		Thread.sleep( 2000 ) ;
+		generalTest( random ) ;
+		serializationTest( random ) ;
+
+		random = null ;
+		System.gc() ;
+
+		Thread.sleep( 4000 ) ;
 	}
 
 	public static void testSeeding( Random random )
@@ -143,6 +151,51 @@ public class TestDevRandom
 		System.out.println() ;
 	}
 
+	private static boolean serializationTest( Random random )
+	{
+		printHeadings( "serialization" ) ;
+
+		ByteArrayOutputStream baos ;
+		ByteArrayInputStream bais ;
+
+		boolean success = false ;
+
+		try
+        {
+			baos = new ByteArrayOutputStream() ;
+	        ObjectOutputStream oos = new ObjectOutputStream( baos ) ;
+	        oos.writeObject( random ) ;
+	        oos.flush() ;
+	        oos.close() ;
+	        baos.flush() ;
+	        baos.close() ;
+
+	        byte[] bytes = baos.toByteArray() ;
+
+	        printBytes( bytes ) ;
+
+	        bais = new ByteArrayInputStream( bytes ) ;
+	        ObjectInputStream ois = new ObjectInputStream( bais ) ;
+	        random = ( Random )ois.readObject() ;
+	        ois.close() ;
+	        bais.close() ;
+        }
+        catch( IOException e )
+        {
+	        success = true ; // test *should* fail on write
+        }
+        catch( ClassNotFoundException e )
+        {
+	        e.printStackTrace() ;
+        }
+
+		if( success )
+			System.out.println( "Success - prevented serialization." ) ;
+		System.out.println() ;
+
+		return success ;
+	}
+
 	private static void printBytes( byte[] bytes )
 	{
 		for( byte bite : bytes )
@@ -152,6 +205,6 @@ public class TestDevRandom
 
 	private static final void printHeadings( String heading )
 	{
-		System.out.println( "\n\n\n\t===\t" + heading.toUpperCase() + "\t===\n\n\n" ) ;
+		System.out.println( "\n\n\n\t===\t" + heading.toUpperCase( Locale.getDefault() ) + "\t===\n\n\n" ) ;
 	}
 }

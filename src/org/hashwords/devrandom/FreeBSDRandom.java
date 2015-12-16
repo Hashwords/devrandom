@@ -25,6 +25,10 @@ package org.hashwords.devrandom ;
 
 import java.io.FileNotFoundException ;
 
+/**
+ * <p>Pseudo random number generator using a <a href="http://www.freebsd.org/">FreeBSD</a>-based device.</p>
+ * @see <a href="http://www.freebsd.org/cgi/man.cgi?query=random&apropos=0&sektion=4">random(4)</a>
+ */
 @SuppressWarnings( "serial" )
 public final class FreeBSDRandom extends DevRandom
 {
@@ -48,7 +52,7 @@ public final class FreeBSDRandom extends DevRandom
 	    super( blocking ) ;
     }
 
-	public FreeBSDRandom( String deviceName ) throws FileNotFoundException , IllegalArgumentException
+	public FreeBSDRandom( String deviceName ) throws FileNotFoundException
     {
 	    super( deviceName ) ;
     }
