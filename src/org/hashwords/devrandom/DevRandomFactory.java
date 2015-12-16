@@ -141,7 +141,6 @@ public class DevRandomFactory
 	 * @return {@link DevRandom} object.
 	 * @see DevRandom#DevRandom()
 	 * @see DevRandom#PREFERRED_BLOCKING
-	 * @see DevRandom#PREFERRED_NON_BLOCKING
 	 * @see <a href="https://en.wikipedia.org/wiki//dev/random">/dev/random</a> and random(4) in your operating system's man pages.
 	 */
 	public static DevRandom getInstance()
@@ -171,6 +170,8 @@ public class DevRandomFactory
 	 * @see DevRandom#DevRandom(boolean)
 	 * @see DevRandom#BLOCKING
 	 * @see DevRandom#NON_BLOCKING
+	 * @see DevRandom#PREFERRED_BLOCKING
+	 * @see DevRandom#PREFERRED_NON_BLOCKING
 	 * @see <a href="https://en.wikipedia.org/wiki//dev/random">/dev/random</a> and random(4) in your operating system's man pages.
 	 */
 	public static DevRandom getInstance( boolean blocking )
