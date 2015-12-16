@@ -1,0 +1,36 @@
+<project name="devrandom" default="jar">
+  
+  <property name="src.dir" value="src"/>
+  <property name="bin.dir" value="bin"/>
+  <property name="jar.dir" value="jar"/>
+  <property name="jar.file" value="${jar.dir}/DevRandom.jar"/>
+
+  <target name="compile">
+    <mkdir dir="${bin.dir}"/>
+    <javac srcdir="${src.dir}" destdir="${bin.dir}"
+	   includeAntRuntime="false">
+      <include name="org/hashwords/devrandom/*.java"/>
+    </javac>
+  </target>
+
+  <target name="doc">
+	<javadoc sourcepath="${src.dir}" destdir="${bin.dir}"
+	packagenames="org.hashwords.devrandom"/>
+  </target>
+
+  <target name="jar" depends="compile">
+    <mkdir dir="${jar.dir}"/>
+    <jar destfile="${jar.file}" basedir="${bin.dir}">
+	  <manifest>
+	    <attribute name="Main-Class"
+		       value="org.hashwords.devrandom.TestDevRandom"/>
+	  </manifest>
+    </jar>
+  </target>
+
+  <target name="clean">
+    <delete dir="${bin.dir}"/>
+    <delete dir="${jar.dir}"/>
+  </target>
+
+</project>
