@@ -17,7 +17,12 @@ public class TestDevRandom
 {
 	public static void main( String[] args ) throws FileNotFoundException, InterruptedException
 	{
-		DevRandom random = DevRandomFactory.getInstance( "/dev/random" ) ;
+		String device = DevRandom.DEV_RANDOM ;
+		if( args.length > 0 )
+			device = args[ 0 ] ;
+
+		System.out.println( "Attempting to create DevRandom with device : " + device ) ;
+		DevRandom random = DevRandomFactory.getInstance( device ) ;
 
 		testSeeding( random ) ;
 		piTest( random ) ;
