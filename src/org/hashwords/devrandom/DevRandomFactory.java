@@ -31,11 +31,11 @@ import java.lang.reflect.Constructor ;
 public class DevRandomFactory
 {
 	/**
-	 * The string "DragonFly" for selecting supported operating systems.<br/>
-	 * <p><font color="red">WARNING :</font> Not currently tested.</p>
+	 * The string "DragonFly" for selecting supported operating systems.<br>
+	 * <p><span style="color:red;">WARNING :</span> Not currently tested.</p>
 	 * @see #SUPPORTED_OSES
 	 * @see <a href="http://www.dragonflybsd.org/cgi/web-man?command=random&section=4">
-	 * random(4)</a> for <a href="http://www.dragonflybsd.org/">DragonFlyBSD</a>.<br/>
+	 * random(4)</a> for <a href="http://www.dragonflybsd.org/">DragonFlyBSD</a>.<br>
 	 */
 	public static final String DRAGONFLY	= "DragonFly" ;
 
@@ -43,7 +43,7 @@ public class DevRandomFactory
 	 * The string "FreeBSD" for selecting supported operating systems.
 	 * @see #SUPPORTED_OSES
 	 * @see <a href="http://www.freebsd.org/cgi/man.cgi?query=random&apropos=0&sektion=4">
-	 * random(4)</a> for <a href="http://www.freebsd.org/">FreeBSD</a>.<br/>
+	 * random(4)</a> for <a href="http://www.freebsd.org/">FreeBSD</a>.<br>
 	 */
 	public static final String FREEBSD		= "FreeBSD" ;
 
@@ -51,7 +51,7 @@ public class DevRandomFactory
 	 * The string "Linux" for selecting supported operating systems.
 	 * @see #SUPPORTED_OSES
 	 * @see <a href="http://man7.org/linux/man-pages/man4/random.4.html">
-	 * random(4)</a> for <a href="http://kernel.org/">Linux</a>.<br/>
+	 * random(4)</a> for <a href="http://kernel.org/">Linux</a>.<br>
 	 */
 	public static final String LINUX		= "Linux" ;
 
@@ -59,16 +59,16 @@ public class DevRandomFactory
 	 * The string "Mac OS X" for selecting supported operating systems.
 	 * @see #SUPPORTED_OSES
 	 * @see <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man4/random.4.html">
-	 * random(4)</a> for <a href="http://www.apple.com/osx/">Darwin / Mac OS X</a>.<br/>
+	 * random(4)</a> for <a href="http://www.apple.com/osx/">Darwin / Mac OS X</a>.<br>
 	 */
 	public static final String MACOSX		= "Mac OS X" ;
 
 	/**
-	 * The string "NetBSD" for selecting supported operating systems.<br/>
-	 * <p><font color="red">WARNING :</font> Not currently tested.</p>
+	 * The string "NetBSD" for selecting supported operating systems.<br>
+	 * <p><span style="color:red;">WARNING :</span> Not currently tested.</p>
 	 * @see #SUPPORTED_OSES
 	 * @see <a href="http://man.netbsd.org/HEAD/usr/share/man/html4/random.html">
-	 * random(4)</a> for <a href="http://www.netbsd.org/">NetBSD</a>.<br/>
+	 * random(4)</a> for <a href="http://www.netbsd.org/">NetBSD</a>.<br>
 	 */
 	public static final String NETBSD		= "NetBSD" ;
 
@@ -76,7 +76,7 @@ public class DevRandomFactory
 	 * The string "OpenBSD" for selecting supported operating systems.
 	 * @see #SUPPORTED_OSES
 	 * @see <a href="http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man4/arandom.4">
-	 * random(4)</a> for <a href="http://www.openbsd.org/">OpenBSD</a>.<br/>
+	 * random(4)</a> for <a href="http://www.openbsd.org/">OpenBSD</a>.<br>
 	 */
 	public static final String OPENBSD		= "OpenBSD" ;
 	

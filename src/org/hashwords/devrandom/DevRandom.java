@@ -34,17 +34,17 @@ import java.util.Random ;
 
 /**
  * <p>Pseudo random number generator using an operating-system-based device.</p>
- * Bytes are read directly from the device and returned as a byte[]<br/>
- * Other types ( ints, longs, booleans ) are derived from the returned bytes.<br/>
- * Floating point methods are implemented by the super-class java.util.Random via this class' {@link #next(int)}.<br/>
- * Seed values received via {@link #setSeed(long)} are written to the device, if possible, updating it's entropy pool.<br/>
+ * Bytes are read directly from the device and returned as a byte[]<br>
+ * Other types ( ints, longs, booleans ) are derived from the returned bytes.<br>
+ * Floating point methods are implemented by the super-class java.util.Random via this class' {@link #next(int)}.<br>
+ * Seed values received via {@link #setSeed(long)} are written to the device, if possible, updating it's entropy pool.<br>
  * 
- * <p><font color="red">WARNING :</font> for performance, the random device is held open until the object's 
+ * <p><span style="color:red;">WARNING :</span> for performance, the random device is held open until the object's 
  * {@link #finalize()} method is called by garbage collection.
  * As this method is protected, the best practice when a {@link DevRandom} object is no longer needed, 
  * is to null the {@link DevRandom} object and call garbage collection with {@link java.lang.System#gc()}.</p>
  * 
- * <p><font color="red">WARNING :</font> Unlike it's superclass, and because of it's operating system based dependency,
+ * <p><span style="color:red;">WARNING :</span> Unlike it's superclass, and because of it's operating system based dependency,
  * {@link DevRandom} objects are not {@link java.io.Serializable}.</p>
  *
  * @see <a href="https://en.wikipedia.org/wiki//dev/random">/dev/random</a> and random(4) in your operating system's man pages.
@@ -79,7 +79,7 @@ public class DevRandom extends Random
 	public final static String DEV_URANDOM = "/dev/urandom" ;
 
 	/**
-	 * String[] containing all devices known to this system.<br/>
+	 * String[] containing all devices known to this system.<br>
 	 * Calls to {@link #DevRandom(String)} will consult this array and throw IllegalArgumentException if no match is found.
 	 * Override, if appropriate, in subclasses.
 	 * @see #DevRandom(String)
@@ -87,13 +87,13 @@ public class DevRandom extends Random
 	protected static String[] deviceNames = { DEV_RANDOM , DEV_URANDOM } ;
 
 	/**
-	 * Preferred blocking device.<br/>
+	 * Preferred blocking device.<br>
 	 * Override, if appropriate, in subclasses.
 	 */
 	protected static String PREFERRED_BLOCKING = DEV_RANDOM ;
 
 	/**
-	 * Preferred non-blocking device.<br/>
+	 * Preferred non-blocking device.<br>
 	 * Override, if appropriate, in subclasses.
 	 */
 	protected static String PREFERRED_NON_BLOCKING = DEV_URANDOM ;
@@ -104,8 +104,8 @@ public class DevRandom extends Random
 	private transient FileChannel oChannel ;
 
 	/**
-	 * <p>Construct a DevRandom object using an operating-system-based device.<p/>
-	 * Chooses a device that may block.<br/>
+	 * <p>Construct a DevRandom object using an operating-system-based device.</p>
+	 * Chooses a device that may block.<br>
 	 * @see #DevRandom(boolean)
 	 * @see #BLOCKING
 	 * @see #NON_BLOCKING
@@ -119,7 +119,7 @@ public class DevRandom extends Random
 
 	/**
 	 * <p>Construct a DevRandom object using an operating-system-based device.</p>
-	 * Some devices may block while waiting for entropy to reach a certain threshold.<br/>
+	 * Some devices may block while waiting for entropy to reach a certain threshold.<br>
 	 * @param blocking	boolean that selects between blocking and non-blocking devices.
 	 * @throws FileNotFoundException
 	 * @see #BLOCKING

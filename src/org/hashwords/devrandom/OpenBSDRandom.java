@@ -35,14 +35,14 @@ public final class OpenBSDRandom extends DevRandom
 	/**
 	 * The String "/dev/arandom" for use with constructor, used for legacy reasons.
 	 * @see DevRandom#DevRandom(String)
-	 * @see #random(4) in your operating system's man pages.
+	 * @see <a href="http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man4/arandom.4">random(4)</a>.
 	 */
 	public final static String DEV_ARANDOM = "/dev/arandom" ;
 
 	/**
 	 * The String "/dev/srandom" for use with constructor, used for legacy reasons.
 	 * @see DevRandom#DevRandom(String)
-	 * @see random(4) in your operating system's man pages.
+	 * @see <a href="http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man4/arandom.4">random(4)</a>.
 	 */
 	public final static String DEV_SRANDOM = "/dev/srandom" ;
 

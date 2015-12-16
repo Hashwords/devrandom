@@ -11,7 +11,7 @@ import java.util.Random ;
 
 /**
  * <p>Miscellaneous package-based tests.</p>
- * <p><font color="red">WARNING :</font> Abandon all hope all ye who enter here !</p>
+ * <p><span style="color:red;">WARNING :</span> Abandon all hope all ye who enter here !</p>
  */
 public class TestDevRandom
 {
