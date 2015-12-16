@@ -10,7 +10,7 @@ import java.util.Locale ;
 import java.util.Random ;
 
 /**
- * <p>Miscellaneous package-based tests.<p/>
+ * <p>Miscellaneous package-based tests.</p>
  * <p><font color="red">WARNING :</font> Abandon all hope all ye who enter here !</p>
  */
 public class TestDevRandom
