@@ -89,6 +89,7 @@ case.
 ## Who is the current DevRandom maintainer ?
 
 DevRandom was written and is currently maintained by Sam Hart for hashwords.org
+
 All emails regarding DevRandom should be directed to
 
 `devrandom @ hashwords.org`
