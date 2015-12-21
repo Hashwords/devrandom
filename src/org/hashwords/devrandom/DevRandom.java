@@ -109,7 +109,7 @@ public class DevRandom extends Random
 	 * @see #DevRandom(boolean)
 	 * @see #PREFERRED_BLOCKING
 	 * @see <a href="https://en.wikipedia.org/wiki//dev/random">/dev/random</a> and random(4) in your operating system's man pages.
-	 * @throws FileNotFoundException
+	 * @throws FileNotFoundException	if the PRNG device cannot be found.
 	 */
 	public DevRandom() throws FileNotFoundException
 	{
@@ -120,7 +120,7 @@ public class DevRandom extends Random
 	 * <p>Construct a DevRandom object using an operating-system-based device.</p>
 	 * Some devices may block while waiting for entropy to reach a certain threshold.<br>
 	 * @param blocking	boolean that selects between blocking and non-blocking devices.
-	 * @throws FileNotFoundException
+	 * @throws FileNotFoundException	if the PRNG device cannot be found.
 	 * @see #DevRandom(String)
 	 * @see #BLOCKING
 	 * @see #NON_BLOCKING
@@ -136,7 +136,7 @@ public class DevRandom extends Random
 	/**
 	 * <p>Construct a DevRandom object using an operating-system-based device.</p>
 	 * @param deviceName	accepts only device names known to {@link DevRandom} or throws IllegalArgumentException
-	 * @throws FileNotFoundException
+	 * @throws FileNotFoundException	if the PRNG device cannot be found.
 	 * @see #DEVICE_NAMES
 	 * @see <a href="https://en.wikipedia.org/wiki//dev/random">/dev/random</a> and random(4) in your operating system's man pages.
 	 */
