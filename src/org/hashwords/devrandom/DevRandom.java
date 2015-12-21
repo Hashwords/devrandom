@@ -296,6 +296,7 @@ public class DevRandom extends Random
 	}
 
 	/**
+	 * <span style="color:red;">WARNING :</span>
 	 * Due to the operating-system-based nature of special devices, serialization is prohibited.<br>
 	 * Attempts to serialize these objects will result in a {@link java.io.NotSerializableException}.
 	 * @param in
@@ -308,6 +309,7 @@ public class DevRandom extends Random
 	}
 
 	/**
+	 * <span style="color:red;">WARNING :</span>
 	 * Due to the operating-system-based nature of special devices, serialization is prohibited.<br>
 	 * Attempts to serialize these objects will result in a {@link java.io.NotSerializableException}.
 	 * @param oos
