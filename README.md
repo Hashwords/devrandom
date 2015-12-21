@@ -25,7 +25,9 @@ It is recommended that instances of DevRandom are initialised via the factory
 methods in DevRandomFactory :
 
 `import java.util.Random ;`
+
 `import org.hashwords.devrandom.DevRandomFactory ;`
+
 
 `Random random = DevRandomFactory.getInstance() ;`
 
@@ -35,6 +37,7 @@ object pointer to null and calling garbage collection :
 
 
 `random = null ;	// set the object pointer to null`
+
 `System.gc() ; 	// call garbage collection`
 
 
