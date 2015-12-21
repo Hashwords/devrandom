@@ -295,11 +295,24 @@ public class DevRandom extends Random
         }
 	}
 
+	/**
+	 * Due to the operating-system-based nature of special devices, serialization is prohibited.<br>
+	 * Attempts to serialize these objects will result in a {@link java.io.NotSerializableException}.
+	 * @param in
+	 * @throws IOException
+	 * @throws ClassNotFoundException
+	 */
 	private void readObject( java.io.ObjectInputStream in ) throws IOException, ClassNotFoundException
 	{
 		throw new java.io.NotSerializableException( this.getClass().getName() ) ;
 	}
 
+	/**
+	 * Due to the operating-system-based nature of special devices, serialization is prohibited.<br>
+	 * Attempts to serialize these objects will result in a {@link java.io.NotSerializableException}.
+	 * @param oos
+	 * @throws IOException
+	 */
 	private void writeObject( java.io.ObjectOutputStream oos ) throws IOException
 	{
 		throw new java.io.NotSerializableException( this.getClass().getName() ) ;
