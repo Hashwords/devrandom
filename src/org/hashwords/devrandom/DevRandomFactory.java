@@ -198,7 +198,7 @@ public class DevRandomFactory
 	 * @param device	path to device, accepts only known devices or throws IllegalArgumentException
 	 * @return {@link DevRandom} object.
 	 * @see DevRandom#DevRandom(String)
-	 * @see DevRandom#deviceNames
+	 * @see DevRandom#DEVICE_NAMES
 	 * @see <a href="https://en.wikipedia.org/wiki//dev/random">/dev/random</a> and random(4) in your operating system's man pages.
 	 */
 	public static DevRandom getInstance( String device )

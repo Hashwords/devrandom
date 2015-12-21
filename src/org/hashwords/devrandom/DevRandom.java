@@ -84,7 +84,7 @@ public class DevRandom extends Random
 	 * Override, if appropriate, in subclasses.
 	 * @see #DevRandom(String)
 	 */
-	protected static String[] deviceNames = { DEV_RANDOM , DEV_URANDOM } ;
+	protected static String[] DEVICE_NAMES = { DEV_RANDOM , DEV_URANDOM } ;
 
 	/**
 	 * Preferred blocking device.<br>
@@ -137,13 +137,13 @@ public class DevRandom extends Random
 	 * <p>Construct a DevRandom object using an operating-system-based device.</p>
 	 * @param deviceName	accepts only device names known to {@link DevRandom} or throws IllegalArgumentException
 	 * @throws FileNotFoundException
-	 * @see #deviceNames
+	 * @see #DEVICE_NAMES
 	 * @see <a href="https://en.wikipedia.org/wiki//dev/random">/dev/random</a> and random(4) in your operating system's man pages.
 	 */
 	public DevRandom( String deviceName ) throws FileNotFoundException
 	{
 		boolean found = false ;
-		for( String current : deviceNames )
+		for( String current : DEVICE_NAMES )
 		{
 			if( current.equals( deviceName ) )
 			{

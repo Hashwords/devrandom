@@ -38,7 +38,7 @@ public final class FreeBSDRandom extends DevRandom
 	 */
 	static
 	{
-		deviceNames = new String[]{ DEV_RANDOM } ;
+		DEVICE_NAMES = new String[]{ DEV_RANDOM } ;
 		PREFERRED_NON_BLOCKING = DEV_RANDOM ;
 	}
 

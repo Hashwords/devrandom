@@ -48,7 +48,7 @@ public final class OpenBSDRandom extends DevRandom
 
 	static
 	{
-		deviceNames = new String[]{ DEV_RANDOM , DEV_ARANDOM , DEV_SRANDOM , DEV_URANDOM } ;
+		DEVICE_NAMES = new String[]{ DEV_RANDOM , DEV_ARANDOM , DEV_SRANDOM , DEV_URANDOM } ;
 		PREFERRED_NON_BLOCKING = DEV_RANDOM ;
 	}
 
