@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015, Sam Hart / Hashwords.
+ * Copyright (c) 2015, Sam Hart
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
