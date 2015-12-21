@@ -67,11 +67,11 @@ number of options available to you :
 If both /dev/random and /dev/urandom devices are available, you can try
 instantiating a DevRandom object directly and checking for error messages. If
 this strategy succeeds, please inform the DevRandom maintainers, the inclusion
-of the output of `System.getProperty( "os.name" )` would be greatly appreciated.
+of the output of `System.getProperty("os.name")` would be greatly appreciated.
 
 If only one of /dev/random or /dev/urandom or some other PRNG devices are
 available, Please notify the DevRandom maintainers, again the inclusion of the
-output of `System.getProperty( "os.name" )` would be greatly appreciated.
+output of `System.getProperty("os.name")` would be greatly appreciated.
 Alternatively you can extend DevRandom to include or exclude devices as is done
 for FreeBSD or OpenBSD; patches of these changes would be appreciated by the
 DevRandom maintainers under a compatible license.
