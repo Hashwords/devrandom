@@ -19,6 +19,14 @@ quality psuedo-random-numbers, DevRandom provides a convenient means by which
 use these devices either as a stand-alone PRNG or to seed other PRNGs.
 
 
+## Where can I obtain DevRandom ?
+
+The latest source code can be obtained from the following public repositories :
+
+https://github.com/Hashwords/devrandom
+https://bitbucket.org/hashwords/devrandom
+
+
 ## What is the recommended practice for using DevRandom ?
 
 It is recommended that instances of DevRandom are initialised via the factory
@@ -84,6 +92,13 @@ Any Java Runtime Edition (JRE) greater or equal to 1.5 (Java 5)
 For Android, if required to choose a target then currently JRE 1.7 appears to
 be the correct one. Please notify the DevRandom maintainers if this is not the
 case.
+
+
+## Where can I obtain the documentation for DevRandom ?
+
+Auto-generated documentation can be found online at :
+
+http://www.hashwords.org/devrandom/doc
 
 
 ## Who is the current DevRandom maintainer ?
