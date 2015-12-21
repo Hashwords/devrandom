@@ -24,21 +24,19 @@ use these devices either as a stand-alone PRNG or to seed other PRNGs.
 It is recommended that instances of DevRandom are initialised via the factory
 methods in DevRandomFactory :
 
-`
-import java.util.Random ;
-import org.hashwords.devrandom.DevRandomFactory ;
+`import java.util.Random ;`
+`import org.hashwords.devrandom.DevRandomFactory ;`
 
-Random random = DevRandomFactory.getInstance() ;
-`
+`Random random = DevRandomFactory.getInstance() ;`
 
 For performance reasons, DevRandom will hold open the operating-system device,
 when you are finished using the device it can be closed again by setting the
 object pointer to null and calling garbage collection :
 
-`
-random = null ;	// set the object pointer to null
-System.gc() ; 	// call garbage collection
-`
+
+`random = null ;	// set the object pointer to null`
+`System.gc() ; 	// call garbage collection`
+
 
 For performance reasons you may not want to call garbage collection immediately
 after null'ing the object.
