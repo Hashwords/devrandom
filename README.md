@@ -63,10 +63,15 @@ will throw a java.io.NotSerializableException
 Operating systems supported by DevRandom include :
 
 Android / Linux
+
 Darwin / Mac OS X
+
 OpenBSD
+
 FreeBSD		(not yet tested)
+
 DragonFlyBSD    (not yet tested)
+
 
 Using DevRandomFactory will return the appropriate instance for supported OSes.
 
