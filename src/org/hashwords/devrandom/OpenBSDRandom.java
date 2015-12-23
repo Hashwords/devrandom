@@ -52,17 +52,17 @@ public final class OpenBSDRandom extends DevRandom
 		PREFERRED_NON_BLOCKING = DEV_RANDOM ;
 	}
 
-	protected OpenBSDRandom() throws FileNotFoundException
+	public OpenBSDRandom() throws FileNotFoundException
     {
 	    super() ;
     }
 
-	protected OpenBSDRandom( boolean blocking ) throws FileNotFoundException
+	public OpenBSDRandom( boolean blocking ) throws FileNotFoundException
     {
 	    super( blocking ) ;
     }
 
-	protected OpenBSDRandom( String deviceName ) throws FileNotFoundException
+	public OpenBSDRandom( String deviceName ) throws FileNotFoundException
     {
 	    super( deviceName ) ;
     }

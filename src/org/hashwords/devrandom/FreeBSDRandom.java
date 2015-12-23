@@ -42,17 +42,17 @@ public final class FreeBSDRandom extends DevRandom
 		PREFERRED_NON_BLOCKING = DEV_RANDOM ;
 	}
 
-	protected FreeBSDRandom() throws FileNotFoundException
+	public FreeBSDRandom() throws FileNotFoundException
     {
 	    super() ;
     }
 
-	protected FreeBSDRandom( boolean blocking ) throws FileNotFoundException
+	public FreeBSDRandom( boolean blocking ) throws FileNotFoundException
     {
 	    super( blocking ) ;
     }
 
-	protected FreeBSDRandom( String deviceName ) throws FileNotFoundException
+	public FreeBSDRandom( String deviceName ) throws FileNotFoundException
     {
 	    super( deviceName ) ;
     }
