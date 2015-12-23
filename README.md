@@ -70,7 +70,7 @@ OpenBSD
 
 FreeBSD		(not yet tested)
 
-DragonFlyBSD    (not yet tested)
+DragonFlyBSD
 
 
 Using DevRandomFactory will return the appropriate instance for supported OSes.

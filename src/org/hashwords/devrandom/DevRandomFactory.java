@@ -31,13 +31,13 @@ import java.lang.reflect.Constructor ;
 public class DevRandomFactory
 {
 	/**
-	 * The string "DragonFly" for selecting supported operating systems.<br>
+	 * The string "DragonFlyBSD" for selecting supported operating systems.<br>
 	 * <p><span style="color:red;">WARNING :</span> Not currently tested.</p>
 	 * @see #SUPPORTED_OSES
 	 * @see <a href="http://www.dragonflybsd.org/cgi/web-man?command=random&section=4">
 	 * random(4)</a> for <a href="http://www.dragonflybsd.org/">DragonFlyBSD</a>.<br>
 	 */
-	public static final String DRAGONFLY	= "DragonFly" ;
+	public static final String DRAGONFLY	= "DragonFlyBSD" ;
 
 	/**
 	 * The string "FreeBSD" for selecting supported operating systems.
