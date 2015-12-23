@@ -40,6 +40,7 @@ public class DevRandomFactory
 
 	/**
 	 * The string "FreeBSD" for selecting supported operating systems.
+	 * <p><span style="color:red;">WARNING :</span> Not currently tested.</p>
 	 * @see #SUPPORTED_OSES
 	 * @see <a href="http://www.freebsd.org/cgi/man.cgi?query=random&apropos=0&sektion=4">
 	 * random(4)</a> for <a href="http://www.freebsd.org/">FreeBSD</a>.<br>
