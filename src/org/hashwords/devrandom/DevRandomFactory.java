@@ -32,7 +32,6 @@ public class DevRandomFactory
 {
 	/**
 	 * The string "DragonFlyBSD" for selecting supported operating systems.<br>
-	 * <p><span style="color:red;">WARNING :</span> Not currently tested.</p>
 	 * @see #SUPPORTED_OSES
 	 * @see <a href="http://www.dragonflybsd.org/cgi/web-man?command=random&section=4">
 	 * random(4)</a> for <a href="http://www.dragonflybsd.org/">DragonFlyBSD</a>.<br>
