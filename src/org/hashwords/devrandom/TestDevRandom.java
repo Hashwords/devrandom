@@ -52,9 +52,10 @@ public class TestDevRandom
 		System.out.println( "Attempting to close " + device ) ;
 		random = null ;
 		System.out.println( "Object pointer null'd" ) ;
+		System.out.println( "Calling garbage collecter." ) ;
 		System.gc() ;
 		System.out.println( "Garbage collecter called." ) ;
-
+		// sleep to differentiate between garbage collection and shutdown.
 		Thread.sleep( 4000 ) ;
 	}
 
