@@ -68,7 +68,7 @@ Darwin / Mac OS X
 
 OpenBSD
 
-FreeBSD		(not yet tested)
+FreeBSD
 
 DragonFlyBSD
 
